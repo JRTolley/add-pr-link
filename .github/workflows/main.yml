@@ -6,7 +6,7 @@ jobs:
     name: A job to add links
     steps:
       - name: Run link 
-        uses: jrtolley/add-pr-link@v1
+        uses: jrtolley/add-pr-link@latest
         with:
           netlify-url: 'http://www.test.com' 
           pr-number: 435
