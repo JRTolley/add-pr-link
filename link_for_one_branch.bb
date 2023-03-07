@@ -1,9 +1,9 @@
 (require '[babashka.curl :as curl])
 (require '[cheshire.core :as json])
 
-(def API-KEY (System/getenv "INPUT_SHORTCUT-API-KEY"))
-(def PR-NUMBER (System/getenv "INPUT_PR-NUMBER"))
-(def NETLIFY-URL (System/getenv "INPUT_NETLIFY-URL"))
+(def API-KEY (System/getenv "SHORTCUT_API_KEY"))
+(def PR-NUMBER (System/getenv "PR_NUMBER"))
+(def NETLIFY-URL (System/getenv "NETLIFY_URL"))
 (def URL "https://api.app.shortcut.com/api/v3")
 (def HEADERS {:headers {"Content-Type" "application/json"
                         "Shortcut-Token" API-KEY}})

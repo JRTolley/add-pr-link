@@ -1,19 +1,5 @@
 name: 'Link for shortcut story'
 description: 'Adds a PR link to a shortcut story'
-inputs:
-  netlify-url:  # id of input
-    description: 'netlify-url to add'
-    required: true
-  pr-number:
-    description: 'pr-number to use'
-    required: true
-  shortcut-api-key:
-    description: 'access-key for shortcut'
-    required: true    
 runs:
   using: 'docker'
   image: 'Dockerfile'
-  args:
-    - ${{ inputs.netlify-url }}
-    - ${{ inputs.pr-number }}
-    - ${{ inputs.shortcut-api-key}}
