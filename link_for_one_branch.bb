@@ -2,13 +2,11 @@
 (require '[cheshire.core :as json])
 
 (def API-KEY (System/getenv "SHORTCUT_API_KEY"))
-;;(def API-KEY "63f89983-33d7-4539-85bc-f09a58730422")
 (def PR-NUMBER (System/getenv "PR_NUMBER"))
 (def NETLIFY-URL (System/getenv "NETLIFY_URL"))
 (def URL "https://api.app.shortcut.com/api/v3")
 (def HEADERS {:headers {"Content-Type" "application/json"
                         "Shortcut-Token" API-KEY}})
-
 
 (defn grab-all-started-stories
   []  

@@ -14,4 +14,6 @@ runs:
   using: 'docker'
   image: 'Dockerfile'
   args:
-    - ${{ inputs.who-to-greet }}
+    - ${{ inputs.netlify-url }}
+    - ${{ inputs.pr-number }}
+    - ${{ inputs.shortcut-api-key}}

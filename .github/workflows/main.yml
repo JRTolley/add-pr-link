@@ -1,0 +1,13 @@
+on: [push]
+
+jobs:
+  test_job:
+    runs-on: ubuntu-latest
+    name: A job to add links
+    steps:
+      -name: Run link 
+       uses: jrtolley/add-pr-link
+       with:
+         netlify-url: 'http://www.test.com' 
+         pr-number: 435
+         shortcut-api-key: ${{ secrets.SHORTCUT_API_KEY }} 
